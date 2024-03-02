@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaomi Watch - Smart Time, Smart Life</title>
+
+    <!-- External CSS Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        #product-gallery {
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        #product-features {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        #product-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #product-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #order-section {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #order-form {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #order-form label {
+            width: 100%;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        #order-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #order-form button {
+            width: 100px;
+            padding: 10px;
+            background-color: #ff4d00;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid #ff4d00;
+        }
+
+        #order-form button:hover {
+            background-color: #333;
+            border: 1px solid #ff4d00;
+            color:#ff4d00;;
+        }
+
+        footer {
+            background-color: #333;
+            color: #ff4d00;
+            border: 1px solid  #ff4d00;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .swiper-container{
+            overflow: hidden;
+            position: relative;
+        }
+        .xx{
+            width: 100%;
+        }
+
+        .swiper-slide{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .swiper-slide img{
+            height: 300px;
+        }
+
+        .swiper-button{
+            color: #ff4d00;
+        }
+
+       
+
+
+        /* Add more styles as needed */
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            #product-gallery {
+                max-width: 100%;
+            }
+
+            #product-features {
+                padding: 20px;
+            }
+
+            #order-form {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Xiaomi Watch</h1>
+        <p>Smart Time, Smart Life</p>
+    </header>
+
+    <section id="product-gallery">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/xiaomi-watch-2-pro.png" alt="Xiaomi Watch Image 1"></div>
+                <div class="swiper-slide"><img src="images/Xiaomi_Watch_2_Pro.png" alt="Xiaomi Watch Image 2"></div>
+                <!-- <div class="swiper-slide"><img src="images/Xiaomi_Watch_2_Prob.png" alt="Xiaomi Watch Image 3"></div> -->
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Add Navigation -->
+            <div  class="swiper-button swiper-button-next"></div>
+            <div class=" swiper-button swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="product-features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Stylish design with a high-resolution AMOLED display</li>
+            <li>Integrated fitness tracking and heart rate monitoring</li>
+            <li>Water-resistant for everyday use</li>
+            <li>Long-lasting battery life</li>
+            <li>Smart notifications and seamless connectivity</li>
+        </ul>
+    </section>
+
+    <section id="order-section">
+        <h2>Order Your Xiaomi Watch Now</h2>
+        <form id="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="address">Shipping Address:</label>
+            <input type="text" id="address" required>
+            <div class="xx">
+                <button type="button" onclick="submitOrder()">Place Order</button>
+            </div>
+           
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Xiaomi Watch. All rights reserved.</p>
+    </footer>
+
+    <!-- External JS Libraries -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+
+        function submitOrder() {
+            // Add your order submission logic here
+            alert('Order placed successfully!');
+        }
+    </script>
+
+</body>
+</html>
